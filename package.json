@@ -2,7 +2,6 @@
   "name": "burak",
   "version": "1.0.0",
   "description": "This is burak project backend",
-  
   "main": "src/server.ts",
   "scripts": {
     "start": "ts-node src/server.ts",
@@ -14,6 +13,7 @@
   "author": "\"MIT\"",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "moment": "^2.29.4"
   },
   "devDependencies": {
