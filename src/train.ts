@@ -1,9 +1,13 @@
-// Shunday function tuzing, u string qabul qilib teskari qilib return qilsin
-// MASALAN: gerReverse("hello") return qiladi "olleh"
+// H-TASK: 
+// shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, 
+// faqat positive qiymatlarni olib string holatda return qilsin
+// MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
 
-function getReverse(inputString: string): string {
-    return inputString.split('').reverse().join('');
+function getPositive(numbers: number[]): string {
+    const positiveNumbers = numbers.filter(num => num > 0);
+    const resultString = positiveNumbers.join('');
+    return resultString;
 }
-const reversedString: string = getReverse("hello");
-console.log(reversedString); 
+const result = getPositive([1, -4, 2]);
+console.log(result);
