@@ -1,17 +1,14 @@
-/* Project Standarts:
-    -Logging standarts
-    -Naming standarts:
-        function, method, variable => CAMEL
-        class => PASCAL
-        folder, file => KEBAB
-        css => SNAKE
-    -Error handling
+// Shunday function tuzing, unga string argument pass bolsin.
+// Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
+// MASALAN: getDigits("m14i1t") return qiladi "141"
 
-*/
-
-/*
-Traditional Api
-Rest Api
-GraphQL Api
-...
-*/
+function getDigits(input: string): string {
+    const digitsArray = input.match(/\d/g);
+    if (digitsArray) {
+        return digitsArray.join("");
+    } else {
+        return "";
+    }
+}
+const result = getDigits("m14i1t");
+console.log(result);
