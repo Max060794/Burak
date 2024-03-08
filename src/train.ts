@@ -1,14 +1,17 @@
-// Shunday function tuzing, unga string argument pass bolsin.
-// Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
-// MASALAN: getDigits("m14i1t") return qiladi "141"
+// Shunday function yozing, u string qabul qilsin va string ichidagi eng uzun sozni qaytarsin.
+// MASALAN: findLongestWord("I come from Uzbekistan") return "Uzbekistan"
 
-function getDigits(input: string): string {
-    const digitsArray = input.match(/\d/g);
-    if (digitsArray) {
-        return digitsArray.join("");
-    } else {
-        return "";
+function findLongestWord(inputString: string): string {
+    const words: string[] = inputString.split(' ');
+
+    let longestWord: string = '';
+    for (const word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
     }
+    return longestWord;
 }
-const result = getDigits("m14i1t");
-console.log(result);
+const inputString: string = "I come from Uzbekistan";
+const result: string = findLongestWord(inputString);
+console.log(result);  // Выводит "Uzbekistan"
